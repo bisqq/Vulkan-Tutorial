@@ -2,7 +2,8 @@
 
 I learned the graphics API Vulkan, by splitting them into specific classes and getting a 3d model to work with textures in the renderer
 
-![](https://user-images.githubusercontent.com/29154540/153740324-8d64e08d-08db-43b6-b5bb-10b7e4bdb904.png)
+https://user-images.githubusercontent.com/29154540/153740810-4321d1fb-f986-4dde-98db-46fe3bd47d03.mp4
+
 
 ## Getting Started
 To get started install GLFW, glm and the vulkan sdk in your project. In your main function I recommend having the setup as so:
