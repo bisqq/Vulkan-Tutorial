@@ -34,18 +34,16 @@ void beginGLFW()
   glfwInit();
   glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
-  vkInit.window = glfwCreateWindow(1080, 720, "Engine", nullptr, nullptr);
+  window = glfwCreateWindow(1080, 720, "Engine", nullptr, nullptr);
 
-  if (nullptr == vkInit.window)
+  if (nullptr == window)
   {
     LOG("Failed to create GLFW window\n");
     shutdownGLFW();
     return;
   }
 
-  glfwMakeContextCurrent(vkInit.window);
-
-  glfwSetWindowRefreshCallback(vkInit.window, windowRefreshFun);
+  glfwMakeContextCurrent(window);
 
   if (!glfwVulkanSupported())
   {
@@ -56,7 +54,7 @@ void beginGLFW()
 
 void updateViewPort()
 {
-  glfwSwapBuffers(vkInit.window);
+  glfwSwapBuffers(window);
   glClear(GL_COLOR_BUFFER_BIT);
 }
 
@@ -68,11 +66,11 @@ void onGlfwWindowResized(GLFWwindow* window, int width, int height)
 
 void Loop()
 {
-  while (!glfwWindowShouldClose(vkInit.window))
+  while (!glfwWindowShouldClose(window))
   {
     glfwPollEvents();
 
-    vkInit.beginDrawFrame();
+    beginDrawFrame();
 
     updateViewPort();
   }
@@ -80,7 +78,7 @@ void Loop()
 
 void shutdownGLFW()
 {
-  glfwDestroyWindow(vkInit.window);
+  glfwDestroyWindow(window);
   glfwTerminate();
 }
 ```
