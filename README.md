@@ -71,7 +71,7 @@ void Loop()
   {
     glfwPollEvents();
 
-    beginDrawFrame();
+    // drawing code here
 
     updateViewPort();
   }
