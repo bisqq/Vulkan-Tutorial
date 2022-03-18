@@ -4,7 +4,7 @@ I learned the graphics API, Vulkan, through the [Vulkan tutorial](https://vulkan
 
 The difficult part about about this project was abstracting/creating a wrapper for it. It was hard to know what needs to be wrapped/abstracted, but I for sure did not want to keep everything in a file or two. My goal for this project is to make it easier for others work with a lower level graphics API. I defninitly will come back and rework the design. 
 
-For now I created a main header file, `Vulkron.h`, containing the main method declarations and fields for Vulkan to operate. I also seperated the `Vertex` and `index` buffers into it's own file for ease of use when adding data to the buffer. From there I created `.cpp` files for each section of vulkan to keep it a bit more organized. I also included a debugging methods to better understand the underlying initialization from Vulkan, it allows the user to see what Vulkan calls and retrieves from your local computer. 
+For now I created a main header file, `Vulkron.h`, containing the main method declarations and fields for Vulkan to operate. I also created a `Vertex` class that binds the data and loads it into memory using `Binding descriptions` and `Attribute descriptions`. From there I created `.cpp` files for each section of vulkan to keep it a bit more organized. I also included a debugging methods to better understand the underlying initialization from Vulkan, it allows the user to see what Vulkan calls and retrieves from your local computer. 
 
 Overall I learned how each part of vulkan operate with each other. At the end I managed to get a 3d model to work with textures in the renderer
 
