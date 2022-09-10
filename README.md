@@ -1,10 +1,5 @@
 # Vulkron
 
-### TODO
-- Rework the design and the code to follow more modern coding practices.
-- Create a more efficient wrapper
-___
-
 I learned the graphics API, Vulkan, through the [Vulkan tutorial](https://vulkan-tutorial.com/) and some experimentation on my own. 
 
 The difficult part about about this project was abstracting/creating a wrapper for it. It was hard to know what needs to be wrapped/abstracted, but I for sure did not want to keep everything in a file or two. My goal for this project is to make it easier for others work with a lower level graphics API. 
